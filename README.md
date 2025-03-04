@@ -31,19 +31,23 @@ https://github.com/Chinachu/Mirakurun/blob/master/src/Mirakurun/Tuner.ts#L175C13
 
 - https://slproweb.com/products/Win32OpenSSL.html
 - https://github.com/tsduck/tsduck/
-### Ubuntu
+### Linux
+tsduck、tsduck-devのパッケージを下記のURLからダウンロードし、インストールします。
+- https://github.com/tsduck/tsduck/releases
 
+ubuntu24.04でのインストール例
 ```bash
-sudo apt install make g++ libssl-dev libedit-dev libedit-dev zlib1g-dev libusb-1.0-0-dev libpcsclite-dev
-git clone https://github.com/tsduck/tsduck.git
-cd tsduck
-make
-make install
-
+wget https://github.com/tsduck/tsduck/releases/download/v3.40-4165/tsduck_3.40-4165.ubuntu24_amd64.deb --no-check-certificate
+wget https://github.com/tsduck/tsduck/releases/download/v3.40-4165/tsduck-dev_3.40-4165.ubuntu24_amd64.deb --no-check-certificate
+apt install -y ./tsduck_3.40-4165.ubuntu24_amd64.deb ./tsduck-dev_3.40-4165.ubuntu24_amd64.deb
+```
+下記の手順でビルドします。
+```bash
+sudo apt install -y --no-install-recommends make g++ libssl-dev libedit-dev libedit-dev zlib1g-dev libusb-1.0-0-dev libpcsclite-dev libnghttp2-dev libidn2-dev librtmp-dev libssh2-1-dev libpsl-dev libkrb5-dev libldap2-dev libzstd-dev libbrotli-dev libmbedtls-dev libudev-dev libssh-dev
 git clone https://github.com/nekohkr/dantto4k.git
 cd dantto4k
 make
-make install
+sudo make install
 ```
 
 ## References
