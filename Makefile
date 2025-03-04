@@ -11,7 +11,7 @@ OPENSSL_INC = $(shell pkg-config --cflags-only-I openssl)
 OPENSSL_LIB = $(shell pkg-config --libs openssl)
 
 TSDUCK_INC = $(shell pkg-config --cflags-only-I tsduck)
-TSDUCK_LIB = $(shell pkg-config --libs tsduck)
+TSDUCK_LIB = $(shell pkg-config --static --libs tsduck)
 
 PCSC_INC = $(shell pkg-config --cflags-only-I libpcsclite)
 PCSC_LIB = $(shell pkg-config --libs libpcsclite)
